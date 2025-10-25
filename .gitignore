@@ -1,2 +1,5 @@
 # Codi de creació de laberints per a Minecraft
 /create-map/
+
+# Ignorar __pycache__ directories
+**/__pycache__/
