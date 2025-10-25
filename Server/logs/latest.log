@@ -1,166 +1,36 @@
-[17:56:48] [Server thread/INFO]: Starting minecraft server version 1.12
-[17:56:48] [Server thread/INFO]: Loading properties
-[17:56:48] [Server thread/INFO]: Default game type: SURVIVAL
-[17:56:48] [Server thread/INFO]: Generating keypair
-[17:56:48] [Server thread/INFO]: Starting Minecraft server on *:25565
-[17:56:48] [Server thread/INFO]: Using default channel type
-[17:56:48] [Server thread/INFO]: This server is running CraftBukkit version git-Bukkit-ed8c725 (MC: 1.12) (Implementing API version 1.12-R0.1-SNAPSHOT)
-[17:56:48] [Server thread/INFO]: [RaspberryJuice] Loading RaspberryJuice v1.10
-[17:56:48] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[17:56:48] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[17:56:48] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[17:56:48] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[17:56:48] [Server thread/INFO]: Preparing level "world"
-[17:56:48] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4957058184805743034)
-[17:56:48] [Server thread/INFO]: Preparing start region for level 1 (Seed: -4957058184805743034)
-[17:56:48] [Server thread/INFO]: Preparing start region for level 2 (Seed: -4957058184805743034)
-[17:56:48] [Server thread/INFO]: [RaspberryJuice] Enabling RaspberryJuice v1.10
-[17:56:48] [Server thread/INFO]: [RaspberryJuice] Using port 4711
-[17:56:48] [Server thread/INFO]: [RaspberryJuice] Using ABSOLUTE locations
-[17:56:48] [Server thread/INFO]: [RaspberryJuice] Using BOTH clicks for hits
-[17:56:48] [Server thread/INFO]: [RaspberryJuice] ThreadListener Started
-[17:56:48] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[17:56:48] [Server thread/INFO]: Done (0,585s)! For help, type "help" or "?"
-[17:57:05] [Server thread/INFO]: FaRiNa010[/127.0.0.1:63621] logged in with entity id 10 at ([world]-14.659546669656034, 4.0, -18.52408482006286)
-[17:57:10] [Thread-6/INFO]: [RaspberryJuice] Starting input thread
-[17:57:10] [Thread-7/INFO]: [RaspberryJuice] Starting output thread!
-[17:57:10] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:63623.
-[17:57:10] [Thread-8/INFO]: [RaspberryJuice] Starting input thread
-[17:57:10] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:63624.
-[17:57:10] [Thread-9/INFO]: [RaspberryJuice] Starting output thread!
-[17:57:10] [Thread-10/INFO]: [RaspberryJuice] Starting input thread
-[17:57:10] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:63625.
-[17:57:10] [Thread-11/INFO]: [RaspberryJuice] Starting output thread!
-[17:58:01] [Server thread/INFO]: FaRiNa010 issued server command: /gamemode 1
-[17:58:09] [Server thread/INFO]: You must specify which player you wish to perform this action on.
-[17:58:20] [Server thread/INFO]: Set FaRiNa010's game mode to Creative Mode
-[17:58:56] [Netty Server IO #1/INFO]: <FaRiNa010> ajuda[m
-
-[17:58:56] [Server thread/INFO]: Comandes disponibles:[m
-
-[17:58:56] [Server thread/INFO]: - start blocks: Inicia el minijoc dels blocs de colors[m
-
-[17:58:56] [Server thread/INFO]: - start f1: Inicia el minijoc del Pitstop F1[m
-
-[17:58:56] [Server thread/INFO]: - distancia blocks: Mostra la dist�ncia als blocs de colors[m
-
-[17:58:56] [Server thread/INFO]: - distancia f1: Mostra la dist�ncia al cotxe de F1[m
-
-[17:58:56] [Server thread/INFO]: - distancia sortida: Mostra la dist�ncia a la sortida del laberint[m
-
-[17:58:56] [Server thread/INFO]: - cofres: Mostra les dist�ncies als cofres amagats[m
-
-[17:58:56] [Server thread/INFO]: - poema: Escolta un poema amb una pista especial[m
-
-[17:59:13] [Netty Server IO #1/INFO]: <FaRiNa010> distancia blocks[m
-
-[17:59:13] [Server thread/INFO]: Dist�ncia als blocs de colors: 3 blocs[m
-
-[17:59:27] [Netty Server IO #1/INFO]: <FaRiNa010> cofres[m
-
-[17:59:28] [Server thread/INFO]: Dist�ncies als cofres:[m
-
-[17:59:29] [Server thread/INFO]: Recorda, son posicions aproximades![m
-
-[17:59:30] [Server thread/INFO]: --------------------------------------------------[m
-
-[17:59:30] [Server thread/INFO]: Dist�ncia al cofre 1: 6 blocs[m
-
-[17:59:30] [Server thread/INFO]: Dist�ncia al cofre 2: 25 blocs[m
-
-[17:59:30] [Server thread/INFO]: Dist�ncia al cofre 3: 30 blocs[m
-
-[17:59:30] [Server thread/INFO]: Dist�ncia al cofre 4: 32 blocs[m
-
-[17:59:30] [Server thread/INFO]: --------------------------------------------------[m
-
-[17:59:48] [Netty Server IO #1/INFO]: <FaRiNa010> cofres[m
-
-[17:59:49] [Server thread/INFO]: Dist�ncies als cofres:[m
-
-[17:59:50] [Server thread/INFO]: Recorda, son posicions aproximades![m
-
-[17:59:51] [Server thread/INFO]: --------------------------------------------------[m
-
-[17:59:51] [Server thread/INFO]: Dist�ncia al cofre 1: 6 blocs[m
-
-[17:59:51] [Server thread/INFO]: Dist�ncia al cofre 2: 25 blocs[m
-
-[17:59:51] [Server thread/INFO]: Dist�ncia al cofre 3: 30 blocs[m
-
-[17:59:51] [Server thread/INFO]: Dist�ncia al cofre 4: 32 blocs[m
-
-[17:59:51] [Server thread/INFO]: --------------------------------------------------[m
-
-[18:00:41] [Netty Server IO #1/INFO]: <FaRiNa010> distancia f1[m
-
-[18:00:41] [Server thread/INFO]: Dist�ncia al cotxe de F1: 20 blocs[m
-
-[18:00:50] [Netty Server IO #1/INFO]: <FaRiNa010> poema[m
-
-[18:00:51] [Server thread/INFO]: Dins el laberint dels colors brillants[m
-
-[18:00:52] [Server thread/INFO]: molts camins et volen trair.[m
-
-[18:00:53] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:63623.
-[18:00:53] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:63624.
-[18:00:53] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:63625.
-[18:03:56] [Thread-13/INFO]: [RaspberryJuice] Starting output thread!
-[18:03:56] [Thread-12/INFO]: [RaspberryJuice] Starting input thread
-[18:03:56] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:63745.
-[18:03:56] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:63746.
-[18:03:56] [Thread-14/INFO]: [RaspberryJuice] Starting input thread
-[18:03:56] [Thread-15/INFO]: [RaspberryJuice] Starting output thread!
-[18:03:56] [Thread-17/INFO]: [RaspberryJuice] Starting output thread!
-[18:03:56] [Thread-16/INFO]: [RaspberryJuice] Starting input thread
-[18:03:56] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:63747.
-[18:04:04] [Netty Server IO #1/INFO]: <FaRiNa010> cofres[m
-
-[18:04:04] [Server thread/INFO]: Distancies als cofres:[m
-
-[18:04:05] [Server thread/INFO]: Recorda, son posicions aproximades![m
-
-[18:04:06] [Server thread/INFO]: --------------------------------------------------[m
-
-[18:04:06] [Server thread/INFO]: Cofre 1: 20 blocs al sur[m
-
-[18:04:06] [Server thread/INFO]: Cofre 2: 40 blocs al sur[m
-
-[18:04:06] [Server thread/INFO]: Cofre 3: 46 blocs al sur[m
-
-[18:04:06] [Server thread/INFO]: Cofre 4: 47 blocs al sur[m
-
-[18:04:06] [Server thread/INFO]: --------------------------------------------------[m
-
-[18:04:21] [Netty Server IO #1/INFO]: <FaRiNa010> cofres[m
-
-[18:04:22] [Server thread/INFO]: Distancies als cofres:[m
-
-[18:04:23] [Server thread/INFO]: Recorda, son posicions aproximades![m
-
-[18:04:24] [Server thread/INFO]: --------------------------------------------------[m
-
-[18:04:24] [Server thread/INFO]: Cofre 1: 17 blocs al norte[m
-
-[18:04:24] [Server thread/INFO]: Cofre 2: 15 blocs al este[m
-
-[18:04:24] [Server thread/INFO]: Cofre 3: 13 blocs al sur[m
-
-[18:04:24] [Server thread/INFO]: Cofre 4: 17 blocs al este[m
-
-[18:04:24] [Server thread/INFO]: --------------------------------------------------[m
-
-[18:04:46] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:63745.
-[18:04:46] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:63746.
-[18:04:46] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:63747.
-[18:08:16] [Server thread/INFO]: Stopping the server
-[18:08:16] [Server thread/INFO]: Stopping server
-[18:08:16] [Server thread/INFO]: [RaspberryJuice] Disabling RaspberryJuice v1.10
-[18:08:16] [Server thread/INFO]: [RaspberryJuice] Raspberry Juice Stopped
-[18:08:16] [Server thread/INFO]: Saving players
-[18:08:16] [Server thread/INFO]: FaRiNa010 lost connection: Server closed
-[18:08:16] [Server thread/INFO]: FaRiNa010 left the game
-[18:08:16] [Server thread/INFO]: Saving worlds
-[18:08:16] [Server thread/INFO]: Saving chunks for level 'world'/overworld
-[18:08:16] [Server thread/INFO]: Saving chunks for level 'world_nether'/the_nether
-[18:08:16] [Server thread/INFO]: Saving chunks for level 'world_the_end'/the_end
+[18:21:39] [Server thread/INFO]: Starting minecraft server version 1.12
+[18:21:39] [Server thread/INFO]: Loading properties
+[18:21:40] [Server thread/INFO]: Default game type: SURVIVAL
+[18:21:40] [Server thread/INFO]: Generating keypair
+[18:21:40] [Server thread/INFO]: Starting Minecraft server on *:25565
+[18:21:40] [Server thread/INFO]: Using default channel type
+[18:21:40] [Server thread/INFO]: This server is running CraftBukkit version git-Bukkit-ed8c725 (MC: 1.12) (Implementing API version 1.12-R0.1-SNAPSHOT)
+[18:21:40] [Server thread/INFO]: [RaspberryJuice] Loading RaspberryJuice v1.10
+[18:21:40] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[18:21:40] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[18:21:40] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[18:21:40] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[18:21:40] [Server thread/INFO]: Preparing level "world"
+[18:21:40] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4957058184805743034)
+[18:21:40] [Server thread/INFO]: Preparing start region for level 1 (Seed: -4957058184805743034)
+[18:21:40] [Server thread/INFO]: Preparing start region for level 2 (Seed: -4957058184805743034)
+[18:21:40] [Server thread/INFO]: [RaspberryJuice] Enabling RaspberryJuice v1.10
+[18:21:40] [Server thread/INFO]: [RaspberryJuice] Using port 4711
+[18:21:40] [Server thread/INFO]: [RaspberryJuice] Using ABSOLUTE locations
+[18:21:40] [Server thread/INFO]: [RaspberryJuice] Using BOTH clicks for hits
+[18:21:40] [Server thread/INFO]: [RaspberryJuice] ThreadListener Started
+[18:21:40] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[18:21:40] [Server thread/INFO]: Done (0,489s)! For help, type "help" or "?"
+[18:21:55] [Server thread/INFO]: FaRiNa010[/127.0.0.1:64446] logged in with entity id 10 at ([world]28.718815123105454, 4.0, 67.5873819840247)
+[18:22:09] [Server thread/INFO]: Set FaRiNa010's game mode to Creative Mode
+[18:25:20] [Server thread/INFO]: Stopping the server
+[18:25:20] [Server thread/INFO]: Stopping server
+[18:25:20] [Server thread/INFO]: [RaspberryJuice] Disabling RaspberryJuice v1.10
+[18:25:20] [Server thread/INFO]: [RaspberryJuice] Raspberry Juice Stopped
+[18:25:20] [Server thread/INFO]: Saving players
+[18:25:20] [Server thread/INFO]: FaRiNa010 lost connection: Server closed
+[18:25:20] [Server thread/INFO]: FaRiNa010 left the game
+[18:25:20] [Server thread/INFO]: Saving worlds
+[18:25:20] [Server thread/INFO]: Saving chunks for level 'world'/overworld
+[18:25:20] [Server thread/INFO]: Saving chunks for level 'world_nether'/the_nether
+[18:25:20] [Server thread/INFO]: Saving chunks for level 'world_the_end'/the_end

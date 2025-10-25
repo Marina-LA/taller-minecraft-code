@@ -164,7 +164,7 @@ class FourBlocksMinigame:
 
         while not completed:
             # Verify hit (to be implemented in the actual game)
-            result = game.__verify_hit(sequence)
+            result = game.verify_hit(sequence)
 
             if result:
                 completed = True
