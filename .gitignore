@@ -3,3 +3,6 @@
 
 # Ignorar __pycache__ directories
 **/__pycache__/
+
+# Server logs
+/Server/logs/

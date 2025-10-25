@@ -38,6 +38,26 @@ def calcular_distancia(pos1, pos2):
     distancia = math.sqrt((pos1.x - pos2.x) ** 2 + (pos1.y - pos2.y) ** 2 + (pos1.z - pos2.z) ** 2)
     return distancia
 
+def obtener_direccion(pos_jugador, pos_cofre):
+    """Determina la dirección cardinal del cofre respecto al jugador"""
+    diff_x = pos_cofre.x - pos_jugador.x
+    diff_z = pos_cofre.z - pos_jugador.z
+    
+    # Determinar dirección principal en eje X (este/oeste)
+    if abs(diff_x) > abs(diff_z):
+        if diff_x > 0:
+            direccion_x = "este"
+        else:
+            direccion_x = "oeste"
+    # Determinar dirección principal en eje Z (norte/sur)
+    else:
+        if diff_z > 0:
+            direccion_x = "sur"  # En Minecraft, Z positivo es sur
+        else:
+            direccion_x = "norte"  # En Minecraft, Z negativo es norte
+    
+    return direccion_x
+
 
 def calcular_distancia_cofres():
     posicio_jugador = mc.player.getTilePos()
@@ -50,15 +70,21 @@ def calcular_distancia_cofres():
     distancia3 = calcular_distancia(posicio_jugador, posicio_cofre3)
     distancia4 = calcular_distancia(posicio_jugador, posicio_cofre4)
     
-    mc.postToChat("Distàncies als cofres:")
+    # Obtener direcciones
+    direccion1 = obtener_direccion(posicio_jugador, posicio_cofre1)
+    direccion2 = obtener_direccion(posicio_jugador, posicio_cofre2)
+    direccion3 = obtener_direccion(posicio_jugador, posicio_cofre3)
+    direccion4 = obtener_direccion(posicio_jugador, posicio_cofre4)
+    
+    mc.postToChat("Distancies als cofres:")
     time.sleep(1)
     mc.postToChat("Recorda, son posicions aproximades!")
     time.sleep(1)
     mc.postToChat("--------------------------------------------------")
-    mc.postToChat(f"Distància al cofre 1: {int(distancia1)} blocs")
-    mc.postToChat(f"Distància al cofre 2: {int(distancia2)} blocs")
-    mc.postToChat(f"Distància al cofre 3: {int(distancia3)} blocs")
-    mc.postToChat(f"Distància al cofre 4: {int(distancia4)} blocs")
+    mc.postToChat(f"Cofre 1: {int(distancia1)} blocs al {direccion1}")
+    mc.postToChat(f"Cofre 2: {int(distancia2)} blocs al {direccion2}")
+    mc.postToChat(f"Cofre 3: {int(distancia3)} blocs al {direccion3}")
+    mc.postToChat(f"Cofre 4: {int(distancia4)} blocs al {direccion4}")
     mc.postToChat("--------------------------------------------------")
 
 def llegir_poema():
@@ -66,13 +92,13 @@ def llegir_poema():
         time.sleep(1)
         mc.postToChat("molts camins et volen trair.")
         time.sleep(1)
-        mc.postToChat("Però l’herba parla en tons elegants,")
+        mc.postToChat("Però l'herba parla en tons elegants,")
         time.sleep(1)
         mc.postToChat("i et diu per on has de seguir.")
         time.sleep(1)
         mc.postToChat("Trepitja el verd amb pas sincer,")
         time.sleep(1)
-        mc.postToChat("i el secret s’obrirà davant teu, viatger.")
+        mc.postToChat("i el secret s'obrira davant teu, viatger.")
 
 def comprovar_xat():
     missatge = chat_events()
@@ -118,7 +144,9 @@ while start:
     if pos.x == 7 and pos.y == 3 and pos.z == 67:
         mc.setBlock(11, 5, 67, block.AIR.id)
         mc.setBlock(11, 4, 67, block.AIR.id)
-
+    elif pos.x == 28 and pos.y == 3 and pos.z == 67:
+        start = False
+        
     time.sleep(1)
 
 temps_final = time.time()
