@@ -49,33 +49,43 @@ class F1PitstopMinigame:
 
 
     def start_game(self):
-        mc.postToChat("Hit the correct wheel according to the car color!")
-
-        hitted = False
-        while not hitted:
+        mc.postToChat("Colpeja la roda correcta!")
+        
+        # Bucla fins que s'hagi resolt (encert o error)
+        while True:
             hitted_block_pos = self.block_events()
+            
+            # Si no hi ha esdeveniment, seguim esperant
             if hitted_block_pos is None:
-                pass
-            elif self.car_color == colors["blue"]:
-                if hitted_block_pos.x == wheels["front_left"][0] and \
-                    hitted_block_pos.y == wheels["front_left"][1] and \
-                    hitted_block_pos.z == wheels["front_left"][2]:
-                    hitted = True
+                continue
+
+            # A partir d'aquí: s'ha tocat un bloc — només una oportunitat
+            correcte = False
+
+            if self.car_color == colors["blue"]:
+                correcte = (hitted_block_pos.x == wheels["front_left"][0] and
+                            hitted_block_pos.y == wheels["front_left"][1] and
+                            hitted_block_pos.z == wheels["front_left"][2])
             elif self.car_color == colors["red"]:
-                if hitted_block_pos.x == wheels["front_right"][0] and \
-                    hitted_block_pos.y == wheels["front_right"][1] and \
-                    hitted_block_pos.z == wheels["front_right"][2]:
-                    hitted = True
+                correcte = (hitted_block_pos.x == wheels["front_right"][0] and
+                            hitted_block_pos.y == wheels["front_right"][1] and
+                            hitted_block_pos.z == wheels["front_right"][2])
             elif self.car_color == colors["yellow"]:
-                if hitted_block_pos.x == wheels["back_left"][0] and \
-                    hitted_block_pos.y == wheels["back_left"][1] and \
-                    hitted_block_pos.z == wheels["back_left"][2]:
-                    hitted = True
+                correcte = (hitted_block_pos.x == wheels["back_left"][0] and
+                            hitted_block_pos.y == wheels["back_left"][1] and
+                            hitted_block_pos.z == wheels["back_left"][2])
             elif self.car_color == colors["green"]:
-                if hitted_block_pos.x == wheels["back_right"][0] and \
-                    hitted_block_pos.y == wheels["back_right"][1] and \
-                    hitted_block_pos.z == wheels["back_right"][2]:
-                    hitted = True   
+                correcte = (hitted_block_pos.x == wheels["back_right"][0] and
+                            hitted_block_pos.y == wheels["back_right"][1] and
+                            hitted_block_pos.z == wheels["back_right"][2])
+
+            if correcte:
+                mc.postToChat("Correcte! Has colpejat la roda indicada.")
+                break  # Fi del joc (èxit)
+            else:
+                mc.postToChat("Incorrecte!")
+                mc.player.setTilePos(1, 4, 1)
+                break  # Fi del joc per espectador (fracàs)
 
         
 

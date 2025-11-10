@@ -7,86 +7,79 @@ import math
 
 mc = minecraft.Minecraft.create()
 
-# 1. Teletransporta el jugador a la zona de jocs
-mc.player.setTilePos(1, 4, 1)
+#####################################################################
+#                              REPTE 1                              #
+#####################################################################
+# QUÈ VOLEM FER?
+# Teletransportar el jugador a la posició inicial del laberint
+# x = 1, y = 4, z = 1
+
+"""
+    AFEGEGIU AQUÍ EL CODI PER TELETRANSPORTAR EL JUGADOR
+"""
 
 
-# 2. Minijoc blocs de colors
+# 1r Minijoc: Blocks Minigame -> hem de generar el repte i retornar el joc i la seqüència
+# 2n Minijoc: F1 Pitstop Minigame -> hem de construir el cotxe. No hem de retornar res.
+
 blocks_minigame = FourBlocksMinigame()
 game, sequence = blocks_minigame.generate_challenge()
-# blocks_minigame.start_game(game, sequence)
 
-# 3. Minijoc Pitstop F1
 f1_minigame = F1PitstopMinigame()
 f1_minigame.build_car()
-# f1_minigame.start_game()
 
 
-def chat_events():
-    chat_events = mc.events.pollChatPosts()
+#####################################################################
+#                            PREGUNTA 1                             #
+#####################################################################
+# QUÈ VOLEM FER?
+# Crear una funció que comprovi els missatges del xat i ens retorni el missatge rebut.
 
-    for e in chat_events:
-        return e.message
+"""
+    ENGANXEU AQUÍ EL CODI PER COMPROVAR ELS MISSATGES DEL XAT
+"""
     
 
-def bloc_trepitjat():
-    pos_jugador = mc.player.getTilePos()
-    return mc.getBlock(pos_jugador.x, pos_jugador.y-2, pos_jugador.z)
-    
+#####################################################################
+#                            PREGUNTA 2                             #
+#####################################################################
+# QUÈ VOLEM FER?
+# Crear una funció que calculi la distància entre dues posicions, i que retorni aquesta distància.
 
-def calcular_distancia(pos1, pos2):
-    distancia = math.sqrt((pos1.x - pos2.x) ** 2 + (pos1.y - pos2.y) ** 2 + (pos1.z - pos2.z) ** 2)
-    return distancia
-
-def obtener_direccion(pos_jugador, pos_cofre):
-    """Determina la dirección cardinal del cofre respecto al jugador"""
-    diff_x = pos_cofre.x - pos_jugador.x
-    diff_z = pos_cofre.z - pos_jugador.z
-    
-    # Determinar dirección principal en eje X (este/oeste)
-    if abs(diff_x) > abs(diff_z):
-        if diff_x > 0:
-            direccion_x = "este"
-        else:
-            direccion_x = "oeste"
-    # Determinar dirección principal en eje Z (norte/sur)
-    else:
-        if diff_z > 0:
-            direccion_x = "sur"  # En Minecraft, Z positivo es sur
-        else:
-            direccion_x = "norte"  # En Minecraft, Z negativo es norte
-    
-    return direccion_x
+"""
+    ENGANXEU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA ENTRE DUES POSICIONS
+"""
 
 
-def calcular_distancia_cofres():
-    posicio_jugador = mc.player.getTilePos()
-    posicio_cofre1 = minecraft.Vec3(11, 4, 19)
-    posicio_cofre2 = minecraft.Vec3(24, 4, 34)
-    posicio_cofre3 = minecraft.Vec3(7, 4, 47)
-    posicio_cofre4 = minecraft.Vec3(24, 4, 43)
-    distancia1 = calcular_distancia(posicio_jugador, posicio_cofre1)
-    distancia2 = calcular_distancia(posicio_jugador, posicio_cofre2)
-    distancia3 = calcular_distancia(posicio_jugador, posicio_cofre3)
-    distancia4 = calcular_distancia(posicio_jugador, posicio_cofre4)
-    
-    # Obtener direcciones
-    direccion1 = obtener_direccion(posicio_jugador, posicio_cofre1)
-    direccion2 = obtener_direccion(posicio_jugador, posicio_cofre2)
-    direccion3 = obtener_direccion(posicio_jugador, posicio_cofre3)
-    direccion4 = obtener_direccion(posicio_jugador, posicio_cofre4)
-    
-    mc.postToChat("Distancies als cofres:")
-    time.sleep(1)
-    mc.postToChat("Recorda, son posicions aproximades!")
-    time.sleep(1)
-    mc.postToChat("--------------------------------------------------")
-    mc.postToChat(f"Cofre 1: {int(distancia1)} blocs al {direccion1}")
-    mc.postToChat(f"Cofre 2: {int(distancia2)} blocs al {direccion2}")
-    mc.postToChat(f"Cofre 3: {int(distancia3)} blocs al {direccion3}")
-    mc.postToChat(f"Cofre 4: {int(distancia4)} blocs al {direccion4}")
-    mc.postToChat("--------------------------------------------------")
+#####################################################################
+#                            PREGUNTA 3                             #
+#####################################################################
+# QUÈ VOLEM FER?
+# Crear una funció que donada la posició del jugador i la posició de l'objectiu,
+# retorni la direcció cardinal (nord, sud, est, oest) de l'objectiu respecte al jugador.
+# Completeu la funció següent:
 
+def obtenir_direccio(pos_jugador, pos_objectiu):
+    """Determina la direcció cardinal del cofre respecte al jugador"""
+    diff_x = pos_objectiu.x - pos_jugador.x
+    diff_z = pos_objectiu.z - pos_jugador.z
+    
+    if abs(diff_x) > abs(diff_z):   # Determinar la direcció principal a l’eix X (est/oest)
+        """
+            ENGANXEU AQUÍ EL CODI X
+        """
+
+
+    else:   # Determinar la direcció principal a l’eix Z (nord/sud)
+        """
+            ENGANXEU AQUÍ EL CODI Z
+        """
+
+    
+    return direccio
+
+
+# Un preciós poema amb una pista especial
 def llegir_poema():
         mc.postToChat("Dins el laberint dels colors brillants,")
         time.sleep(1)
@@ -100,31 +93,68 @@ def llegir_poema():
         time.sleep(1)
         mc.postToChat("i el secret s'obrira davant teu, viatger.")
 
+
+#####################################################################
+#                            PREGUNTA 4                             #
+#####################################################################
 def comprovar_xat():
+    # obtenim missatge del xat
     missatge = chat_events()
+
+    # QUÈ VOLEM FER?
+    # Si el missatge és "start blocks", iniciem el minijoc dels blocs de colors
+    # Si el missatge és "start f1", iniciem el minijoc del Pitstop F1
+    # Si el missatge és "distancia blocks", calculem i mostrem la distància als blocs de colors
+    # Si el missatge és "distancia f1", calculem i mostrem la distància al cotxe de F1
+    # Si el missatge és "distancia sortida", calculem i mostrem la distància a la sortida del laberint
+    # Si el missatge és "poema", llegim el poema amb la pista especial
+
+    # IMPORTANT:
+    # En el fitxer de les opcions només us proporcionem la base del codi.
+
     if missatge == "start blocks":
         blocks_minigame.start_game(game, sequence)
+
     elif missatge == "start f1":
         f1_minigame.start_game()
+
     elif missatge == "distancia blocks":
-        posicio_jugador = mc.player.getTilePos()
+        """
+            Calcula i mostra la distància i la direcció als blocs de colors
+        """
         posicio_blocs = minecraft.Vec3(2, 4, 18)
-        distancia = calcular_distancia(posicio_jugador, posicio_blocs)
-        mc.postToChat(f"Distància als blocs de colors: {int(distancia)} blocs")
+
+        """
+            AFEGEGIU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA I DIRECCIÓ ALS BLOCS DE COLORS
+        """
+
+
+
     elif missatge == "distancia f1":
-        posicio_jugador = mc.player.getTilePos()
+        """
+            Calcula i mostra la distància i la direcció al cotxe de F1
+        """
         posicio_f1 = minecraft.Vec3(3, 4, 37)
-        distancia = calcular_distancia(posicio_jugador, posicio_f1)
-        mc.postToChat(f"Distància al cotxe de F1: {int(distancia)} blocs")
+
+        """
+            AFEGEGIU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA I DIRECCIÓ AL COTXE DE F1
+        """
+
+
     elif missatge == "distancia sortida":
-        posicio_jugador = mc.player.getTilePos()
+        """
+            Calcula i mostra la distància i la direcció a la sortida del laberint
+        """
         posicio_sortida = minecraft.Vec3(24, 4, 67)
-        distancia = calcular_distancia(posicio_jugador, posicio_sortida)
-        mc.postToChat(f"Distància a la sortida del laberint: {int(distancia)} blocs")
-    elif missatge == "cofres":
-        calcular_distancia_cofres()
+
+        """
+            AFEGEGIU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA I DIRECCIÓ A LA SORTIDA DEL LABERINT
+        """
+
+
     elif missatge == "poema":
         llegir_poema()
+
     elif missatge == "ajuda":
         mc.postToChat("Comandes disponibles:")
         mc.postToChat("- start blocks: Inicia el minijoc dels blocs de colors")
@@ -132,20 +162,34 @@ def comprovar_xat():
         mc.postToChat("- distancia blocks: Mostra la distància als blocs de colors")
         mc.postToChat("- distancia f1: Mostra la distància al cotxe de F1")
         mc.postToChat("- distancia sortida: Mostra la distància a la sortida del laberint")
-        mc.postToChat("- cofres: Mostra les distàncies als cofres amagats")
-        mc.postToChat("- poema: Escolta un poema amb una pista especial")
+        mc.postToChat("- poema: Llegeix un poema amb una pista especial")
 
+
+#####################################################################
+#                      BUCLE PRINCIPAL DEL JOC                      #
+#####################################################################
 start = True
 temps_inici = time.time()
 while start:
+
     comprovar_xat()
     
     pos = mc.player.getTilePos()
-    if pos.x == 7 and pos.y == 3 and pos.z == 67:
-        mc.setBlock(11, 5, 67, block.AIR.id)
-        mc.setBlock(11, 4, 67, block.AIR.id)
-    elif pos.x == 28 and pos.y == 3 and pos.z == 67:
-        start = False
+
+#####################################################################
+#                              REPTE 2                              #
+#####################################################################
+# QUÈ VOLEM FER?
+# Volem definir una condició per a desbloquejar l'accés a la següent zona del laberint
+# quan el jugador arribi a una posició concreta.
+#   Si el jugador està a la posició (7, 4, 67):
+#       - Treure els blocs que tanquen el pas (11, 5, 67) i (11, 4, 67) -> block.AIR.id
+#   Si el jugador està a la posició (28, 3, 67):
+#       - Acabar el joc (start = False)
+
+    """
+        AFEGEGIU AQUÍ EL CODI
+    """ 
         
     time.sleep(1)
 

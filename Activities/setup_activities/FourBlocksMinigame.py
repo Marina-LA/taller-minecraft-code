@@ -157,9 +157,9 @@ class FourBlocksMinigame:
         return game, sequence
 
     def start_game(self, game, sequence):
-        mc.postToChat("Welcome to the Bombs Minigame!")
-        mc.postToChat("Hit the correct blocks to defuse the bomb.")
-        mc.postToChat("Good luck!")
+        mc.postToChat("Colpeja el bloc correcte per obrir la porta!")
+        mc.postToChat("Nomes hi ha una oportunitat!")
+        mc.postToChat("Bona sort!")
         completed = False
 
         while not completed:
@@ -168,8 +168,12 @@ class FourBlocksMinigame:
 
             if result:
                 completed = True
+            else:
+                mc.postToChat("Bloc incorrecte!")
+                mc.player.setTilePos(1, 4, 1)
+                break
 
-        print("Perfecte! Has encertat el bloc correcte.")
+        mc.postToChat("Perfecte! Has encertat el bloc correcte.")
         time.sleep(2)
         mc.setBlock(3, 4, 20, block.AIR.id)
         mc.setBlock(3, 5, 20, block.AIR.id)

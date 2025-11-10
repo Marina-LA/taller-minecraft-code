@@ -6,3 +6,9 @@
 
 # Server logs
 /Server/logs/
+
+# Ignorar fitxers temporals de Jupyter Notebook
+*.ipynb_checkpoints
+
+# Codi amb les respostes als reptes
+/Activities/respostes.ipynb

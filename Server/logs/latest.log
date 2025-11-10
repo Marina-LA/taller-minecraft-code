@@ -1,36 +1,71 @@
-[18:21:39] [Server thread/INFO]: Starting minecraft server version 1.12
-[18:21:39] [Server thread/INFO]: Loading properties
-[18:21:40] [Server thread/INFO]: Default game type: SURVIVAL
-[18:21:40] [Server thread/INFO]: Generating keypair
-[18:21:40] [Server thread/INFO]: Starting Minecraft server on *:25565
-[18:21:40] [Server thread/INFO]: Using default channel type
-[18:21:40] [Server thread/INFO]: This server is running CraftBukkit version git-Bukkit-ed8c725 (MC: 1.12) (Implementing API version 1.12-R0.1-SNAPSHOT)
-[18:21:40] [Server thread/INFO]: [RaspberryJuice] Loading RaspberryJuice v1.10
-[18:21:40] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
-[18:21:40] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
-[18:21:40] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
-[18:21:40] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
-[18:21:40] [Server thread/INFO]: Preparing level "world"
-[18:21:40] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4957058184805743034)
-[18:21:40] [Server thread/INFO]: Preparing start region for level 1 (Seed: -4957058184805743034)
-[18:21:40] [Server thread/INFO]: Preparing start region for level 2 (Seed: -4957058184805743034)
-[18:21:40] [Server thread/INFO]: [RaspberryJuice] Enabling RaspberryJuice v1.10
-[18:21:40] [Server thread/INFO]: [RaspberryJuice] Using port 4711
-[18:21:40] [Server thread/INFO]: [RaspberryJuice] Using ABSOLUTE locations
-[18:21:40] [Server thread/INFO]: [RaspberryJuice] Using BOTH clicks for hits
-[18:21:40] [Server thread/INFO]: [RaspberryJuice] ThreadListener Started
-[18:21:40] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
-[18:21:40] [Server thread/INFO]: Done (0,489s)! For help, type "help" or "?"
-[18:21:55] [Server thread/INFO]: FaRiNa010[/127.0.0.1:64446] logged in with entity id 10 at ([world]28.718815123105454, 4.0, 67.5873819840247)
-[18:22:09] [Server thread/INFO]: Set FaRiNa010's game mode to Creative Mode
-[18:25:20] [Server thread/INFO]: Stopping the server
-[18:25:20] [Server thread/INFO]: Stopping server
-[18:25:20] [Server thread/INFO]: [RaspberryJuice] Disabling RaspberryJuice v1.10
-[18:25:20] [Server thread/INFO]: [RaspberryJuice] Raspberry Juice Stopped
-[18:25:20] [Server thread/INFO]: Saving players
-[18:25:20] [Server thread/INFO]: FaRiNa010 lost connection: Server closed
-[18:25:20] [Server thread/INFO]: FaRiNa010 left the game
-[18:25:20] [Server thread/INFO]: Saving worlds
-[18:25:20] [Server thread/INFO]: Saving chunks for level 'world'/overworld
-[18:25:20] [Server thread/INFO]: Saving chunks for level 'world_nether'/the_nether
-[18:25:20] [Server thread/INFO]: Saving chunks for level 'world_the_end'/the_end
+[15:39:25] [Server thread/INFO]: Loading properties
+[15:39:25] [Server thread/INFO]: Default game type: SURVIVAL
+[15:39:25] [Server thread/INFO]: Generating keypair
+[15:39:25] [Server thread/INFO]: Starting Minecraft server on *:25565
+[15:39:25] [Server thread/INFO]: Using default channel type
+[15:39:25] [Server thread/INFO]: This server is running CraftBukkit version git-Bukkit-ed8c725 (MC: 1.12) (Implementing API version 1.12-R0.1-SNAPSHOT)
+[15:39:25] [Server thread/INFO]: [RaspberryJuice] Loading RaspberryJuice v1.10
+[15:39:25] [Server thread/WARN]: **** SERVER IS RUNNING IN OFFLINE/INSECURE MODE!
+[15:39:25] [Server thread/WARN]: The server will make no attempt to authenticate usernames. Beware.
+[15:39:25] [Server thread/WARN]: While this makes the game possible to play without internet access, it also opens up the ability for hackers to connect with any username they choose.
+[15:39:25] [Server thread/WARN]: To change this, set "online-mode" to "true" in the server.properties file.
+[15:39:25] [Server thread/INFO]: Preparing level "world"
+[15:39:25] [Server thread/INFO]: Preparing start region for level 0 (Seed: -4957058184805743034)
+[15:39:25] [Server thread/INFO]: Preparing start region for level 1 (Seed: -4957058184805743034)
+[15:39:25] [Server thread/INFO]: Preparing start region for level 2 (Seed: -4957058184805743034)
+[15:39:26] [Server thread/INFO]: [RaspberryJuice] Enabling RaspberryJuice v1.10
+[15:39:26] [Server thread/INFO]: [RaspberryJuice] Using port 4711
+[15:39:26] [Server thread/INFO]: [RaspberryJuice] Using ABSOLUTE locations
+[15:39:26] [Server thread/INFO]: [RaspberryJuice] Using BOTH clicks for hits
+[15:39:26] [Server thread/INFO]: [RaspberryJuice] ThreadListener Started
+[15:39:26] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[15:39:26] [Server thread/INFO]: Done (0,618s)! For help, type "help" or "?"
+[15:40:59] [Server thread/INFO]: FaRiNa010[/127.0.0.1:65283] logged in with entity id 10 at ([world]6.606815450059235, 4.0, -6.893658895641092)
+[15:41:17] [Server thread/INFO]: Set FaRiNa010's game mode to Creative Mode
+[15:42:03] [Thread-6/INFO]: [RaspberryJuice] Starting input thread
+[15:42:03] [Thread-7/INFO]: [RaspberryJuice] Starting output thread!
+[15:42:03] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:65315.
+[15:42:03] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:65315.
+[15:46:02] [Thread-8/INFO]: [RaspberryJuice] Starting input thread
+[15:46:02] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:65362.
+[15:46:02] [Thread-9/INFO]: [RaspberryJuice] Starting output thread!
+[15:46:02] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:65362.
+[16:57:45] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:52178.
+[16:57:45] [Thread-11/INFO]: [RaspberryJuice] Starting output thread!
+[16:57:45] [Thread-10/INFO]: [RaspberryJuice] Starting input thread
+[16:57:45] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:52179.
+[16:57:45] [Thread-13/INFO]: [RaspberryJuice] Starting output thread!
+[16:57:45] [Thread-12/INFO]: [RaspberryJuice] Starting input thread
+[16:57:45] [Thread-15/INFO]: [RaspberryJuice] Starting output thread!
+[16:57:45] [Thread-4/INFO]: [RaspberryJuice] Opened connection to/127.0.0.1:52180.
+[16:57:45] [Thread-14/INFO]: [RaspberryJuice] Starting input thread
+[16:59:11] [Netty Server IO #2/INFO]: <FaRiNa010> start blocks[m
+
+[16:59:12] [Server thread/INFO]: Welcome to the Bombs Minigame![m
+
+[16:59:12] [Server thread/INFO]: Hit the correct blocks to defuse the bomb.[m
+
+[16:59:12] [Server thread/INFO]: Good luck![m
+
+[16:59:28] [Server thread/INFO]: S'ha obert la porta![m
+
+[16:59:29] [Server thread/INFO]: Segueix endavant per escapar del laberint.[m
+
+[17:00:30] [Netty Server IO #2/INFO]: <FaRiNa010> start f1[m
+
+[17:00:30] [Server thread/INFO]: Hit the correct wheel according to the car color![m
+
+[17:00:38] [Server thread/INFO]: Perfecte! Has canviat la roda correcta.[m
+
+[17:00:40] [Server thread/INFO]: S'ha obert la porta![m
+
+[17:00:41] [Server thread/INFO]: Segueix endavant per escapar del laberint.[m
+
+[17:06:21] [Server thread/INFO]: Felicitats! Has escapat del laberint![m
+
+[17:06:21] [Server thread/INFO]: Temps total: 8 minuts i 36 segons[m
+
+[17:06:21] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:52178.
+[17:06:21] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:52179.
+[17:06:21] [Server thread/INFO]: [RaspberryJuice] Closed connection to/127.0.0.1:52180.
+[17:43:14] [Thread-2/INFO]: Stopping server
