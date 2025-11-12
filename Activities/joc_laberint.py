@@ -119,9 +119,7 @@ def comprovar_xat():
         f1_minigame.start_game()
 
     elif missatge == "distancia blocks":
-        """
-            Calcula i mostra la distància i la direcció als blocs de colors
-        """
+        # Calcula i mostra la distància i la direcció als blocs de colors
         posicio_blocs = minecraft.Vec3(2, 4, 18)
 
         """
@@ -131,9 +129,7 @@ def comprovar_xat():
 
 
     elif missatge == "distancia f1":
-        """
-            Calcula i mostra la distància i la direcció al cotxe de F1
-        """
+        # Calcula i mostra la distància i la direcció al cotxe de F1
         posicio_f1 = minecraft.Vec3(3, 4, 37)
 
         """
@@ -142,9 +138,7 @@ def comprovar_xat():
 
 
     elif missatge == "distancia sortida":
-        """
-            Calcula i mostra la distància i la direcció a la sortida del laberint
-        """
+        # Calcula i mostra la distància i la direcció a la sortida del laberint
         posicio_sortida = minecraft.Vec3(24, 4, 67)
 
         """
@@ -184,7 +178,7 @@ while start:
 # quan el jugador arribi a una posició concreta.
 #   Si el jugador està a la posició (7, 4, 67):
 #       - Treure els blocs que tanquen el pas (11, 5, 67) i (11, 4, 67) -> block.AIR.id
-#   Si el jugador està a la posició (28, 3, 67):
+#   Si el jugador està a la posició (28, 4, 67):
 #       - Acabar el joc (start = False)
 
     """

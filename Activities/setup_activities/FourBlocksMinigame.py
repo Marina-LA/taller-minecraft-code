@@ -149,7 +149,10 @@ class FourBlocksMinigame:
         hit_pos = self.block_events()
         if hit_pos is None:
             return False
-        return block_pos[0] == hit_pos.x and block_pos[1] == hit_pos.y and block_pos[2] == hit_pos.z
+        if block_pos[0] == hit_pos.x and block_pos[1] == hit_pos.y and block_pos[2] == hit_pos.z:
+            return True
+        else: 
+            return ""
     
     def generate_challenge(self):
         game = FourBlocksMinigame()
@@ -168,15 +171,16 @@ class FourBlocksMinigame:
 
             if result:
                 completed = True
-            else:
-                mc.postToChat("Bloc incorrecte!")
+                mc.postToChat("Perfecte! Has encertat el bloc correcte.")
+                time.sleep(1)
+                mc.setBlock(3, 4, 20, block.AIR.id)
+                mc.setBlock(3, 5, 20, block.AIR.id)
+                mc.postToChat("S'ha obert la porta!")
+                time.sleep(1)
+                mc.postToChat("Segueix endavant per escapar del laberint.")
+            elif result == "":
+                mc.postToChat("T'has equivocat de bloc!")
                 mc.player.setTilePos(1, 4, 1)
                 break
-
-        mc.postToChat("Perfecte! Has encertat el bloc correcte.")
-        time.sleep(2)
-        mc.setBlock(3, 4, 20, block.AIR.id)
-        mc.setBlock(3, 5, 20, block.AIR.id)
-        mc.postToChat("S'ha obert la porta!")
-        time.sleep(1)
-        mc.postToChat("Segueix endavant per escapar del laberint.")
+            
+            time.sleep(0.1)

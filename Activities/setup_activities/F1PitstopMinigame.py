@@ -50,49 +50,67 @@ class F1PitstopMinigame:
 
     def start_game(self):
         mc.postToChat("Colpeja la roda correcta!")
+        mc.postToChat("Tens 30 segons per completar-ho!")
+
+        import time
+        start_time = time.time()
+        time_limit = 15
+        last_displayed_time = time_limit
+        hitted = False
         
-        # Bucla fins que s'hagi resolt (encert o error)
-        while True:
+        while not hitted:
+            # Calcular tiempo transcurrido y restante
+            current_time = time.time()
+            elapsed_time = current_time - start_time
+            time_remaining = time_limit - elapsed_time
+            
+            # Verificar si se acabó el tiempo
+            if time_remaining <= 0:
+                mc.postToChat("Temps esgotat! Has fallat.")
+                mc.player.setTilePos(1, 4, 1)
+                return False
+            
+            # Mostrar segundos restantes (solo si cambió el número)
+            current_seconds = int(time_remaining)
+            if current_seconds < last_displayed_time:
+                mc.postToChat(f"Temps: {current_seconds} segons")
+                last_displayed_time = current_seconds
+            
+            # Verificar si el jugador golpeó algún bloque
             hitted_block_pos = self.block_events()
             
-            # Si no hi ha esdeveniment, seguim esperant
             if hitted_block_pos is None:
+                time.sleep(0.1)
                 continue
-
-            # A partir d'aquí: s'ha tocat un bloc — només una oportunitat
-            correcte = False
-
+            
+            # Verificar si golpeó la rueda correcta según el color del coche
             if self.car_color == colors["blue"]:
-                correcte = (hitted_block_pos.x == wheels["front_left"][0] and
-                            hitted_block_pos.y == wheels["front_left"][1] and
-                            hitted_block_pos.z == wheels["front_left"][2])
+                if (hitted_block_pos.x == wheels["front_left"][0] and
+                    hitted_block_pos.y == wheels["front_left"][1] and
+                    hitted_block_pos.z == wheels["front_left"][2]):
+                    hitted = True
             elif self.car_color == colors["red"]:
-                correcte = (hitted_block_pos.x == wheels["front_right"][0] and
-                            hitted_block_pos.y == wheels["front_right"][1] and
-                            hitted_block_pos.z == wheels["front_right"][2])
+                if (hitted_block_pos.x == wheels["front_right"][0] and
+                    hitted_block_pos.y == wheels["front_right"][1] and
+                    hitted_block_pos.z == wheels["front_right"][2]):
+                    hitted = True
             elif self.car_color == colors["yellow"]:
-                correcte = (hitted_block_pos.x == wheels["back_left"][0] and
-                            hitted_block_pos.y == wheels["back_left"][1] and
-                            hitted_block_pos.z == wheels["back_left"][2])
+                if (hitted_block_pos.x == wheels["back_left"][0] and
+                    hitted_block_pos.y == wheels["back_left"][1] and
+                    hitted_block_pos.z == wheels["back_left"][2]):
+                    hitted = True
             elif self.car_color == colors["green"]:
-                correcte = (hitted_block_pos.x == wheels["back_right"][0] and
-                            hitted_block_pos.y == wheels["back_right"][1] and
-                            hitted_block_pos.z == wheels["back_right"][2])
+                if (hitted_block_pos.x == wheels["back_right"][0] and
+                    hitted_block_pos.y == wheels["back_right"][1] and
+                    hitted_block_pos.z == wheels["back_right"][2]):
+                    hitted = True
 
-            if correcte:
-                mc.postToChat("Correcte! Has colpejat la roda indicada.")
-                break  # Fi del joc (èxit)
-            else:
-                mc.postToChat("Incorrecte!")
-                mc.player.setTilePos(1, 4, 1)
-                break  # Fi del joc per espectador (fracàs)
-
-        
-
+        # Si llegó aquí, significa que acertó
         mc.postToChat("Perfecte! Has canviat la roda correcta.")
-        time.sleep(2)
+        time.sleep(1)
         mc.setBlock(3, 4, 43, block.AIR.id)
         mc.setBlock(3, 5, 43, block.AIR.id)
         mc.postToChat("S'ha obert la porta!")
         time.sleep(1)
         mc.postToChat("Segueix endavant per escapar del laberint.")
+        return True
