@@ -59,31 +59,31 @@ class F1PitstopMinigame:
         hitted = False
         
         while not hitted:
-            # Calcular tiempo transcurrido y restante
+
             current_time = time.time()
             elapsed_time = current_time - start_time
             time_remaining = time_limit - elapsed_time
             
-            # Verificar si se acabó el tiempo
+
             if time_remaining <= 0:
                 mc.postToChat("Temps esgotat! Has fallat.")
                 mc.player.setTilePos(1, 4, 1)
                 return False
             
-            # Mostrar segundos restantes (solo si cambió el número)
+
             current_seconds = int(time_remaining)
             if current_seconds < last_displayed_time:
                 mc.postToChat(f"Temps: {current_seconds} segons")
                 last_displayed_time = current_seconds
             
-            # Verificar si el jugador golpeó algún bloque
+
             hitted_block_pos = self.block_events()
             
             if hitted_block_pos is None:
                 time.sleep(0.1)
                 continue
             
-            # Verificar si golpeó la rueda correcta según el color del coche
+
             if self.car_color == colors["blue"]:
                 if (hitted_block_pos.x == wheels["front_left"][0] and
                     hitted_block_pos.y == wheels["front_left"][1] and
@@ -105,7 +105,7 @@ class F1PitstopMinigame:
                     hitted_block_pos.z == wheels["back_right"][2]):
                     hitted = True
 
-        # Si llegó aquí, significa que acertó
+
         mc.postToChat("Perfecte! Has canviat la roda correcta.")
         time.sleep(1)
         mc.setBlock(3, 4, 43, block.AIR.id)

@@ -125,7 +125,7 @@ class FourBlocksMinigame:
                     "applied_rule": rule["action"]
                 }
         
-        # Fallback (should never be reached because of the default rule)
+
         return {
             "block": 3,
             "action": "Hit the fourth block (fallback)",
@@ -166,7 +166,6 @@ class FourBlocksMinigame:
         completed = False
 
         while not completed:
-            # Verify hit (to be implemented in the actual game)
             result = game.verify_hit(sequence)
 
             if result:
