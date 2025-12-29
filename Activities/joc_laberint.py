@@ -8,14 +8,14 @@ import math
 mc = minecraft.Minecraft.create()
 
 #####################################################################
-#                              PREGUNTA 1                              #
+#                            PREGUNTA 1                             #
 #####################################################################
 # QUÈ VOLEM FER?
 # Teletransportar el jugador a la posició inicial del laberint
 # x = 1, y = 4, z = 1
 
 """
-    AFEGEGIU AQUÍ EL CODI PER TELETRANSPORTAR EL JUGADOR
+    ENGANXEU AQUÍ EL CODI PER TELETRANSPORTAR EL JUGADOR
 """
 
 
@@ -64,18 +64,10 @@ def obtenir_direccio(pos_jugador, pos_objectiu):
     diff_x = pos_objectiu.x - pos_jugador.x
     diff_z = pos_objectiu.z - pos_jugador.z
     
-    if abs(diff_x) > abs(diff_z):   # Determinar la direcció principal a l’eix X (est/oest)
-        """
-            ENGANXEU AQUÍ EL CODI X
-        """
+    """
+        ENGANXEU AQUÍ EL CODI 
+    """
 
-
-    else:   # Determinar la direcció principal a l’eix Z (nord/sud)
-        """
-            ENGANXEU AQUÍ EL CODI Z
-        """
-
-    
     return direccio
 
 
@@ -90,7 +82,7 @@ def llegir_poema():
         mc.postToChat("i et diu per on has de seguir.")
         time.sleep(1)
         mc.postToChat("Trepitja el verd amb pas sincer,")
-        time.sleep(1)
+        time.sleep(1) 
         mc.postToChat("i el secret s'obrira davant teu, viatger.")
 
 
@@ -114,41 +106,10 @@ def comprovar_xat():
 
     if missatge == "start blocks":
         blocks_minigame.start_game(game, sequence)
-
     elif missatge == "start f1":
         f1_minigame.start_game()
-
-    elif missatge == "distancia blocks":
-        # Calcula i mostra la distància i la direcció als blocs de colors
-        posicio_blocs = minecraft.Vec3(2, 4, 18)
-
-        """
-            AFEGEGIU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA I DIRECCIÓ ALS BLOCS DE COLORS
-        """
-
-
-
-    elif missatge == "distancia f1":
-        # Calcula i mostra la distància i la direcció al cotxe de F1
-        posicio_f1 = minecraft.Vec3(3, 4, 37)
-
-        """
-            AFEGEGIU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA I DIRECCIÓ AL COTXE DE F1
-        """
-
-
-    elif missatge == "distancia sortida":
-        # Calcula i mostra la distància i la direcció a la sortida del laberint
-        posicio_sortida = minecraft.Vec3(24, 4, 67)
-
-        """
-            AFEGEGIU AQUÍ EL CODI PER CALCULAR LA DISTÀNCIA I DIRECCIÓ A LA SORTIDA DEL LABERINT
-        """
-
-
     elif missatge == "poema":
         llegir_poema()
-
     elif missatge == "ajuda":
         mc.postToChat("Comandes disponibles:")
         mc.postToChat("- start blocks: Inicia el minijoc dels blocs de colors")
@@ -157,6 +118,10 @@ def comprovar_xat():
         mc.postToChat("- distancia f1: Mostra la distància al cotxe de F1")
         mc.postToChat("- distancia sortida: Mostra la distància a la sortida del laberint")
         mc.postToChat("- poema: Llegeix un poema amb una pista especial")
+    
+    """
+        ENGANXEU AQUÍ EL CODI 
+    """
 
 
 #####################################################################
@@ -182,8 +147,8 @@ while start:
 #       - Acabar el joc (start = False)
 
     """
-        AFEGEGIU AQUÍ EL CODI
-    """ 
+        ENGANXEU AQUÍ EL CODI
+    """
         
     time.sleep(1)
 
