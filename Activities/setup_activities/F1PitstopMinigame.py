@@ -50,32 +50,10 @@ class F1PitstopMinigame:
 
     def start_game(self):
         mc.postToChat("Colpeja la roda correcta!")
-        mc.postToChat("Tens 30 segons per completar-ho!")
 
-        import time
-        start_time = time.time()
-        time_limit = 15
-        last_displayed_time = time_limit
         hitted = False
         
-        while not hitted:
-
-            current_time = time.time()
-            elapsed_time = current_time - start_time
-            time_remaining = time_limit - elapsed_time
-            
-
-            if time_remaining <= 0:
-                mc.postToChat("Temps esgotat! Has fallat.")
-                mc.player.setTilePos(1, 4, 1)
-                return False
-            
-
-            current_seconds = int(time_remaining)
-            if current_seconds < last_displayed_time:
-                mc.postToChat(f"Temps: {current_seconds} segons")
-                last_displayed_time = current_seconds
-            
+        while not hitted:    
 
             hitted_block_pos = self.block_events()
             

@@ -8,7 +8,7 @@ import math
 mc = minecraft.Minecraft.create()
 
 #####################################################################
-#                              REPTE 1                              #
+#                              PREGUNTA 1                              #
 #####################################################################
 # QUÈ VOLEM FER?
 # Teletransportar el jugador a la posició inicial del laberint
@@ -30,7 +30,7 @@ f1_minigame.build_car()
 
 
 #####################################################################
-#                            PREGUNTA 1                             #
+#                            PREGUNTA 2                             #
 #####################################################################
 # QUÈ VOLEM FER?
 # Crear una funció que comprovi els missatges del xat i ens retorni el missatge rebut.
@@ -41,7 +41,7 @@ f1_minigame.build_car()
     
 
 #####################################################################
-#                            PREGUNTA 2                             #
+#                            PREGUNTA 3                             #
 #####################################################################
 # QUÈ VOLEM FER?
 # Crear una funció que calculi la distància entre dues posicions, i que retorni aquesta distància.
@@ -52,7 +52,7 @@ f1_minigame.build_car()
 
 
 #####################################################################
-#                            PREGUNTA 3                             #
+#                            PREGUNTA 4                             #
 #####################################################################
 # QUÈ VOLEM FER?
 # Crear una funció que donada la posició del jugador i la posició de l'objectiu,
@@ -95,7 +95,7 @@ def llegir_poema():
 
 
 #####################################################################
-#                            PREGUNTA 4                             #
+#                            PREGUNTA 5                             #
 #####################################################################
 def comprovar_xat():
     # obtenim missatge del xat
@@ -171,7 +171,7 @@ while start:
     pos = mc.player.getTilePos()
 
 #####################################################################
-#                              REPTE 2                              #
+#                            PREGUNTA 6                             #
 #####################################################################
 # QUÈ VOLEM FER?
 # Volem definir una condició per a desbloquejar l'accés a la següent zona del laberint
